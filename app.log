@@ -1,0 +1,29 @@
+INFO:root:Iniciando a config de log
+ERROR:root:Ocorreu um erro no metodo get_data_from_savecoins: 'int' object has no attribute 'chat'
+ERROR:TeleBot:AttributeError occurred, args=("'str' object has no attribute 'chat'",)
+Traceback (most recent call last):
+  File "app.py", line 44, in get_data_from_savecoins
+    message_error_handler(message)
+  File "app.py", line 24, in message_error_handler
+    bot.reply_to(message.chat.id, "Não foi possível realizar a consulta. Estamos com problema e em breve o serviço será normalizado")
+  File "/home/rafael/Documents/workspace-studies/bot-savecoins/.env/lib/python3.6/site-packages/telebot/__init__.py", line 1303, in reply_to
+    return self.send_message(message.chat.id, text, reply_to_message_id=message.message_id, **kwargs)
+AttributeError: 'int' object has no attribute 'chat'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rafael/Documents/workspace-studies/bot-savecoins/.env/lib/python3.6/site-packages/telebot/util.py", line 62, in run
+    task(*args, **kwargs)
+  File "app.py", line 47, in get_data_from_savecoins
+    message_error_handler('Ocorreu um erro ao buscar informações do jogo')
+  File "app.py", line 24, in message_error_handler
+    bot.reply_to(message.chat.id, "Não foi possível realizar a consulta. Estamos com problema e em breve o serviço será normalizado")
+AttributeError: 'str' object has no attribute 'chat'
+
+INFO:root:Iniciando a config de log
+INFO:root:Iniciando a config de log
+INFO:root:https://api-savecoins.nznweb.com.br/v1/games?currency=BRL&filter[platform]=nintendo&filter[title]=Mario%20+%20Rabbids%20Kingdom%20Battle&locale=en
+INFO:root:Iniciando a config de log
+INFO:root:https://api-savecoins.nznweb.com.br/v1/games?currency=BRL&filter[platform]=nintendo&filter[title]=mario&locale=en
+INFO:root:https://api-savecoins.nznweb.com.br/v1/games?currency=BRL&filter[platform]=nintendo&filter[title]=mario-rabbids-kingdom-battle&locale=en
