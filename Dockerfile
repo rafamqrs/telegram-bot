@@ -1,5 +1,5 @@
 FROM python:3
-ENV BOT_KEY_SAVECOINS=1242251013:AAF8ZnZQfJ_xN3QV6btvl8ffwhXxJXwRUW8
+ENV BOT_KEY_SAVECOINS=<BOT_KEY>
 WORKDIR /usr/src/app
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
